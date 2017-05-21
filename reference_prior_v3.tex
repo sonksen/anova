@@ -616,12 +616,37 @@ Above it was shown that $|h_j(\boldsymbol{\theta})|=n^{m_j}$ thus the
 numerator of Equation~\cite{Lemma1} is a constant.
 % Sort out the parameter space.
 
-% Describe the integral
-% Take limits. 
+Careful bookkeeping is need to evaluate the integrals in the
+denominator of Equation~\cite{Lemma1}. Without loss of generality,
+assume that the elements of each
+$\boldsymbol{\theta}_{(j)}=(\theta_{(j),1}, \theta_{(j),2}, \ldots, \theta_{(j),m_j}$ are ordered. Then the integral within the product is
+\begin{eqnarray*}
+  \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}
+|h_j(\boldsymbol{\theta})|^{1/2}   
+d\boldsymbol{\Theta}_{(j)} & \propto & \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]} d\boldsymbol{\Theta}_{(j)} \\
+& \propto & \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}\ldots \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}
+d\boldsymbol{\Theta}_{(j),1}\ldots d\boldsymbol{\Theta}_{(j),m_j} \\
+\end{eqnarray*}
+Making
 
-The anti-derivative $\int |h_j(\boldsymbol{\theta})|^{1/2} d\theta = n^{m_j/2}\theta$. 
+Note that for any collection of $l<\theta_1 < \theta_2 < .. \theta_k< u$ with possible further restrictions $l_i < \theta_i < u_i$.
 
+Then
+\begin{eqnarray}
+  \int_{\Theta} d\theta  &=& \int_{\Theta} d\theta_{1}d\theta_{2}\ldots d\theta_{k}\\
+  &=& \int_{\Theta} (min(\theta_2, u_1)-max(l, l_i) d\theta_{2}\ldots d\theta_{k}
+\end{eqnarray}
 
+\[
+\Theta_j = \left\{ \boldsymbol{\theta_{(j)}} : \theta_{(j),1} < \theta_{(j),2} <  \ldots,
+\theta_{(j),m_j} \right\}
+\]
+
+\[
+\Theta_j|\Theta_{(1:(j-1))} = \left\{ \boldsymbol{\theta_{(j)}} :
+\theta_{(j),1} < \theta_{(j),2} <  \ldots,
+\theta_{(j),m_j} \right\}
+\]
 
 
 
@@ -630,10 +655,18 @@ The anti-derivative $\int |h_j(\boldsymbol{\theta})|^{1/2} d\theta = n^{m_j/2}\t
 \]
 
 
+% Describe the integral
+The anti-derivative $\int |h_j(\boldsymbol{\theta})|^{1/2} d\theta = n^{m_j/2}\theta$. 
+
+% Take limits. 
+
 
 \[
 \int d\boldsymbol{\theta}_{(j)}
 \]
+
+
+
 
 
 
