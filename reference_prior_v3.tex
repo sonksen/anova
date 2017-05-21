@@ -608,18 +608,69 @@ afterwards.
 
 \subsection*{Proof of Theorem 1}
 
-\begin{eqnarray*}
-\pi(\boldsymbol{\theta}) &\propto& \frac{1}{\prod_{j=2}^{m}\left(\gamma_j - \nu_j\right)^{m_j}} \label{thm1}
-\end{eqnarray*}
-
 Above it was shown that $|h_j(\boldsymbol{\theta})|=n^{m_j}$ thus the
-numerator of Equation~\cite{Lemma1} is a constant.
-% Sort out the parameter space.
+numerator of Equation~\cite{Lemma1} is a constant.Careful bookkeeping
+is need to evaluate the integrals in the denominator of
+Equation~\cite{Lemma1}. Without loss of generality, assume that the
+elements of each $\boldsymbol{\theta}_{(j)}=(\theta_{(j),1},
+\theta_{(j),2}, \ldots, \theta_{(j),m_j})$ are ordered. Note the
+following simple intergrals for a parameter $l<\theta<u$.
+\[
+\int_l^u d\theta = u-l
+\]
+\[
+\int_l^u (\theta-l)^m d\theta = (u-l)^{m+1}
+\]
+\[
+\int_l^u (u-\theta)^m d\theta = (u-l)^{m+1}
+\]
 
-Careful bookkeeping is need to evaluate the integrals in the
-denominator of Equation~\cite{Lemma1}. Without loss of generality,
-assume that the elements of each
-$\boldsymbol{\theta}_{(j)}=(\theta_{(j),1}, \theta_{(j),2}, \ldots, \theta_{(j),m_j}$ are ordered. Then the integral within the product is
+The joint integral over
+$\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]$ can be broken
+down to one of these 3 simple integrals at each step, only the range
+(greatest lower bound and least upper bound) for each $\theta_{(j),i}$
+needs to be determined.  Namely, if either the extreme bounds (-l or
+l), a parameter in the integral ($\theta_{(i)}$) or a parameter in
+$\boldsymbol{\theta}_{(1)}, \ldots, \boldsymbol{\theta}_{(j-1)}$. There are $m_j$ total integrals with the joint integral of the following form
+\[
+\int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}
+|h_j(\boldsymbol{\theta})|^{1/2}   
+d\boldsymbol{\Theta}_{(j)}  =  (\gamma_j - \eta_j)^{m_j}.
+\]
+Where $\gamma_j$ is the smallest element of $\Theta_{(1:(j-1))}$ larger than the largest value of $\Theta_{(j)}$ or $l$ if no such element exists. Similarly, $\eta_j$ is the largest element of $\Theta_{(1:(j-1))}$ smaller than the smallest value of $\Theta_{(j)}$ or $-l$ if no such element exists.
+
+Repeating the above for $j=1,..., m$ and collecting the results yields Equation~\ref{theorem1}
+
+\subsection*{Proof of Theorem 2}
+
+\subsection*{Proof of Theorem 3}
+
+
+\subsection*{Works Cited}\label{section:references}
+%
+% Here's the first appendix, the list of references:
+%
+\bibliography{research}
+%
+% And now for some pretty impressive notation.  In this example, I have used
+%   the tabular environment to line up the columns in ASCE style.
+%   Note that this and all appendices (except the references) start with 
+%   the \section command
+%
+% \section{Notation}
+% \emph{The following symbols are used in this paper:}%\par\vspace{0.10in}
+% \nopagebreak
+% \par
+% \begin{tabular}{r  @{\hspace{1em}=\hspace{1em}}  l}
+% $D$                    & pile diameter (m); \\
+% $R$                    & distance (m);      and\\
+% $C_{\mathrm{Oh\;no!}}$ & fudge factor.
+% \end{tabular}
+%
+
+\end{document}
+
+Then the integral within the product is
 \begin{eqnarray*}
   \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}
 |h_j(\boldsymbol{\theta})|^{1/2}   
@@ -628,6 +679,11 @@ d\boldsymbol{\Theta}_{(j)} & \propto & \int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(
 d\boldsymbol{\Theta}_{(j),1}\ldots d\boldsymbol{\Theta}_{(j),m_j} \\
 \end{eqnarray*}
 Making
+
+
+
+
+
 
 Note that for any collection of $l<\theta_1 < \theta_2 < .. \theta_k< u$ with possible further restrictions $l_i < \theta_i < u_i$.
 
@@ -669,29 +725,3 @@ The anti-derivative $\int |h_j(\boldsymbol{\theta})|^{1/2} d\theta = n^{m_j/2}\t
 
 
 
-
-
-
-\subsection*{Works Cited}\label{section:references}
-%
-% Here's the first appendix, the list of references:
-%
-\bibliography{research}
-%
-% And now for some pretty impressive notation.  In this example, I have used
-%   the tabular environment to line up the columns in ASCE style.
-%   Note that this and all appendices (except the references) start with 
-%   the \section command
-%
-% \section{Notation}
-% \emph{The following symbols are used in this paper:}%\par\vspace{0.10in}
-% \nopagebreak
-% \par
-% \begin{tabular}{r  @{\hspace{1em}=\hspace{1em}}  l}
-% $D$                    & pile diameter (m); \\
-% $R$                    & distance (m);      and\\
-% $C_{\mathrm{Oh\;no!}}$ & fudge factor.
-% \end{tabular}
-%
-
-\end{document}
