@@ -216,16 +216,16 @@ for the reference prior that is given in Lemma 1 of
 \begin{eqnarray}\label{eq:ref_l}
 \pi^{l}(\boldsymbol{\theta})
 & = &
-\frac{\Pi_{j=1}^{m}|h_j(\boldsymbol{\theta})|^{1/2}}{\Pi_{j=1}^{m}\int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}|h_j(\boldsymbol{\theta})|^{1/2}d\boldsymbol{\theta_{(j)}}}I_{\Theta^{l}}(\boldsymbol{\theta}),\label{Lemma1}
+\frac{\Pi_{j=1}^{m}|h_j(\boldsymbol{\theta})|^{1/2}}{\Pi_{j=1}^{m}\int_{\Theta^{l}\cap[\Theta_{j}|\Theta_{(1:(j-1))}]}|h_j(\boldsymbol{\theta})|^{1/2}d\boldsymbol{\theta_{(j)}}}I_{\Theta^{l}}(\boldsymbol{\theta}),
 \end{eqnarray}
 where $[\Theta_{j}|\Theta_{(1:(j-1))}]$ is the parameter space of $\pmb\theta_{(j)}$ given $\pmb\theta_{(1:(j-1))}$.
 
 To derive a general expression for the reference prior, we need to
 determine the integrals in the denominator of Equation
-\ref{eq:ref_l}. We define $\pmb\theta_{(1:j),\;k}$ to be the $k^{th}$
+\eqref{eq:ref_l}. We define $\pmb\theta_{(1:j),\;k}$ to be the $k^{th}$
 element of the vector $\pmb\theta_{(1:j)}$. The term
 $|h_j(\boldsymbol{\theta})|^{1/2}$ can be canceled out from Equation
-\ref{eq:ref_l} because it is only a function of $n$. Under regularity
+\eqref{eq:ref_l} because it is only a function of $n$. Under regularity
 conditions, if the Fisher information matrix of the model satisfies
 Lemma 1 in \cite{BergerBernardo1992}, careful calculation can prove
 the following innovative theorems:
@@ -280,9 +280,9 @@ increasing order and (2) with decreasing order, then,
 \end{eqnarray}
 \end{thm}
 $\gamma_{j1}$, $\eta_{j1}$, $\gamma_{j2}$ and $\eta_{j2}$ can be
-determined by the definitions in Theorem \ref{theorem1} with
+determined by the definitions in Theorem \eqref{theorem1} with
 $m_{j1}+m_{j2}=m_j$. The final reference priors in the true parameter
-space in Theorems \ref{theorem1} and \ref{theorem3} can be obtained by
+space in Theorems \eqref{theorem1} and \eqref{theorem3} can be obtained by
 making $l\to\infty$.
 
 Detailed proofs can be found in the appendix. 
@@ -302,8 +302,8 @@ same assumption that
 $\varepsilon_{ij}\overset{iid}{\sim}N(0,\sigma^2)$, one can show that
 the general expressions of the reference priors, given the mean
 responses of the grouping variable follow a common order, share the
-same forms as we showed in Theorem \ref{theorem1}, Theorem
-\ref{theorem2} and Theorem \ref{theorem3}.
+same forms as we showed in Theorem \eqref{theorem1}, Theorem
+\eqref{theorem2} and Theorem \eqref{theorem3}.
 \subsection{2.2 Simulation Study}
 In this simulation study, we focus on a one-way ANOVA model with group
 means following a simple order, i.e., $\mu_1<\mu_2<\hdots<\mu_k$. To
@@ -609,9 +609,9 @@ afterwards.
 \subsection*{Proof of Theorem 1}
 
 Above it was shown that $|h_j(\boldsymbol{\theta})|=n^{m_j}$ thus the
-numerator of Equation~\cite{Lemma1} is a constant.Careful bookkeeping
+numerator of Equation~\eqref{eq:ref_l} is a constant.Careful bookkeeping
 is need to evaluate the integrals in the denominator of
-Equation~\cite{Lemma1}. Without loss of generality, assume that the
+Equation~\eqref{eq:ref_l}. Without loss of generality, assume that the
 elements of each $\boldsymbol{\theta}_{(j)}=(\theta_{(j),1},
 \theta_{(j),2}, \ldots, \theta_{(j),m_j})$ are ordered. Note the
 following simple intergrals for a parameter $l<\theta<u$.
@@ -639,7 +639,7 @@ d\boldsymbol{\Theta}_{(j)}  =  (\gamma_j - \eta_j)^{m_j}.
 \]
 Where $\gamma_j$ is the smallest element of $\Theta_{(1:(j-1))}$ larger than the largest value of $\Theta_{(j)}$ or $l$ if no such element exists. Similarly, $\eta_j$ is the largest element of $\Theta_{(1:(j-1))}$ smaller than the smallest value of $\Theta_{(j)}$ or $-l$ if no such element exists.
 
-Repeating the above for $j=1,..., m$ and collecting the results yields Equation~\ref{theorem1}
+Repeating the above for $j=1,..., m$ and collecting the results yields Equation~\eqref{theorem1}
 
 \subsection*{Proof of Theorem 2}
 
